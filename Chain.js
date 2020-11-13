@@ -8,8 +8,8 @@ class Chain {
           bodyA : bodyA,
           bodyB : bodyB,
           stiffness : 1,
-          length : 20,
-         pointB:{x:this.offsetX,y:this.offsetY}
+          length : 40,
+          pointB:{x:this.offsetX,y:this.offsetY}
       }
     this.chain = Constraint.create(options)
     World.add(world,this.chain);   

@@ -17,19 +17,19 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
  
-	bob1 = new Bob(100,300,70);
-	bob2 = new Bob(80,300,70);
-	bob3 = new Bob(60,300,70);
-	bob4 = new Bob(40,300,70);
-  bob5 = new Bob(20,300,70);		
+	bob1 = new Bob(400,600,70);
+	bob2 = new Bob(450,600,70);
+	bob3 = new Bob(500,600,70);
+  bob4 = new Bob(350,600,70);
+  bob5 = new Bob(300,600,70);		
 	
-  roof = new Roof(400,200,350,25);
+  roof = new Roof(400,400,350,25);
   
-  chain1 = new Chain(roof.body,bob1.body,-70*2,0); 
-  chain2 = new Chain(roof.body,bob2.body,-60*2,0); 
-  chain3 = new Chain(roof.body,bob3.body,-50*2,0); 
-  chain4 = new Chain(roof.body,bob4.body,-40*2,0); 
-  chain5 = new Chain(roof.body,bob5.body,-30*2,0); 
+  chain1 = new Chain(bob1.body,roof.body,100*2,700); 
+  chain2 = new Chain(bob2.body,roof.body,80*5,300); 
+  chain3 = new Chain(bob3.body,roof.body,60*6,300);
+  chain4 = new Chain(bob4.body,roof.body,-40*8,300); 
+  chain5 = new Chain(bob5.body,roof.body,-20*2,300); 
 
 	Engine.run(engine); 
 }
@@ -53,5 +53,4 @@ function draw() {
   chain5.display();
 
   drawSprites();
- 
 }

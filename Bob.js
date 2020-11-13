@@ -1,7 +1,12 @@
 class Bob {
   constructor (x,y,diameter){
    
-    this.body = Bodies.circle(x,y,diameter);
+    var option = {
+      restitution : 0,
+      isStatic : true,
+    }
+
+    this.body = Bodies.circle(x,y,diameter,option);
     this.diameter = diameter;
     
     World.add(world,this.body);
