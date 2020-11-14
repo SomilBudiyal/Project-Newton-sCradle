@@ -7,14 +7,14 @@ class Chain {
       var options ={
           bodyA : bodyA,
           bodyB : bodyB,
-          stiffness : 1,
-          length : 40,
+          stiffness : 0.04,
+          length : 10,
           pointB:{x:this.offsetX,y:this.offsetY}
       }
     this.chain = Constraint.create(options)
     World.add(world,this.chain);   
  }
  display(){
-    line(this.chain.bodyA.position.x,this.chain.bodyA.position.y,this.chain.bodyB.position.x,this.chain.bodyB.position.y) 
+    line(this.chain.bodyA.position.x,this.chain.bodyA.position.y,this.chain.bodyB.position.x + this.offsetX,this.chain.bodyB.position.y + this.offsetY) 
  }
 }
