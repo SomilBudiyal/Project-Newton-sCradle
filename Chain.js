@@ -7,8 +7,6 @@ class Chain {
       var options ={
           bodyA : bodyA,
           bodyB : bodyB,
-          stiffness : 0.04,
-          length : 10,
           pointB:{x:this.offsetX,y:this.offsetY}
       }
     this.chain = Constraint.create(options)
