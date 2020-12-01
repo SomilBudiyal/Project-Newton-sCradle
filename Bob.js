@@ -2,7 +2,7 @@ class Bob {
   constructor (x,y,diameter){
    
     var option = {
-       'restitution' : 0,
+       'restitution' : 1,
        'density' : 0.8,
     }
 
@@ -15,7 +15,7 @@ class Bob {
    var pos =this.body.position; 
   push();
    translate(pos.x,pos.y);  
-   fill("blue");
+   fill("red");
    ellipse(0,0,this.diameter,this.diameter);
    pop();
  }
